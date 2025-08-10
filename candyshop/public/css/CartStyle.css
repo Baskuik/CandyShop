@@ -1,0 +1,48 @@
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.quantity-btn {
+    background: #5a3e85;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.quantity-btn.remove-btn {
+    background: #ff6f61;
+}
+
+.quantity {
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+.discount-code {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.discount-code input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.apply-discount {
+    background: #5a3e85;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}

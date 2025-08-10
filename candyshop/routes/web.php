@@ -1,11 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CartController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-
 
 Route::get('/contact', function () {
     return view('contact');
@@ -20,3 +19,11 @@ Route::get('/producten/drinken', function () {
     ];
     return view('producten.drinken', compact('drinken'));
 })->name('producten.drinken');
+
+// Verwijder deze statische winkelwagen route!
+// Route::get('/winkelwagen', function () { ... });
+
+Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
+Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
+Route::post('/cart/update/{id}', [CartController::class, 'updateQuantity'])->name('cart.update');
+Route::post('/cart/remove/{id}', [CartController::class, 'removeItem'])->name('cart.removeItem');

@@ -6,6 +6,8 @@
     <title>Sweet Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="{{ asset('css/DrinkenStyle.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/CartStyle.css') }}" rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
   /* Achtergrondkleur navbar: zacht pastelroze */
   .navbar-custom {
@@ -100,9 +102,11 @@
   </div>
 </nav>
 
-
 @yield('content')
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+@yield('scripts')
+
 </body>
 </html>
